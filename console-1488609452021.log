@@ -1,0 +1,185 @@
+var a;
+undefined
+typeof a;
+"undefined"
+a=100;
+100
+typeof a;
+"number"
+a=100.20;
+100.2
+typeof a;
+"number"
+a="amit";
+"amit"
+typeof a;
+"string"
+a='X';
+"X"
+typeof a;
+"string"
+a='amit';
+"amit"
+typeof a;
+"string"
+a="Let's Do It ";
+"Let's Do It "
+a=true;
+true
+typeof a;
+"boolean"
+a=100/0;
+Infinity
+typeof a;
+"number"
+a="100";
+"100"
+b = 100;
+100
+a==b;
+true
+a===b;
+false
+a+b;
+"100100"
+parseInt(a) + b;
+200
+typeof a;
+"string"
+typeof b;
+"number"
+a-b;
+0
+a*b;
+10000
+a/b;
+1
+a = parseInt("ten");
+NaN
+typeof a;
+"number"
+a= {};
+Object {}
+typeof a;
+"object"
+a instanceof Object;
+true
+typeof Object;
+"function"
+var ram = {id:1001,name:"Ram"};
+undefined
+var shyam = {id:1002,name:"shyam",salary:9999};
+undefined
+shyam.bonus =9999;
+9999
+shyam;
+Object {id: 1002, name: "shyam", salary: 9999, bonus: 9999}
+ram;
+Object {id: 1001, name: "Ram"}
+delete ram.id;
+true
+ram;
+Object {name: "Ram"}
+var x=[10,20,30,40,50];
+undefined
+typeof x;
+"object"
+x instanceof Array;
+true
+x instanceof Object;
+true
+ram instanceof Array;
+false
+ram instanceof Object;
+true
+function print(){
+console.log("this is print Call ");
+}
+undefined
+print();
+VM650:2 this is print Call 
+undefined
+typeof print;
+"function"
+print;
+function print(){
+console.log("this is print Call ");
+}
+rr = 1000;
+1000
+rr;
+1000
+print;
+function print(){
+console.log("this is print Call ");
+}
+var tt = rr;
+undefined
+tt;
+1000
+var h = print;
+undefined
+h;
+function print(){
+console.log("this is print Call ");
+}
+typeof h;
+"function"
+h();
+VM650:2 this is print Call 
+undefined
+function evOdd(x){
+if(x%2==0){
+console.log("Even ",x);
+}
+else{
+console.log("Odd ",x);
+}
+}
+undefined
+evOdd(2);
+VM908:3 Even  2
+undefined
+evOdd(5);
+VM908:6 Odd  5
+undefined
+function twoTable(i){
+console.log(2*i);
+}
+undefined
+twoTable(3);
+VM1023:2 6
+undefined
+twoTable(2);
+VM1023:2 4
+undefined
+function iteration(fn){
+for(var i = 1; i<=10; i++){
+fn(i);
+}
+}
+undefined
+iteration(evOdd);
+VM908:6 Odd  1
+VM908:3 Even  2
+VM908:6 Odd  3
+VM908:3 Even  4
+VM908:6 Odd  5
+VM908:3 Even  6
+VM908:6 Odd  7
+VM908:3 Even  8
+VM908:6 Odd  9
+VM908:3 Even  10
+undefined
+iteration(twoTable);
+VM1023:2 2
+VM1023:2 4
+VM1023:2 6
+VM1023:2 8
+VM1023:2 10
+VM1023:2 12
+VM1023:2 14
+VM1023:2 16
+VM1023:2 18
+VM1023:2 20
+undefined
