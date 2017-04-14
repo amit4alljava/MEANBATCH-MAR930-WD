@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+	function printNames(){
+		// DOM Manipulation
+		var firstName = document.getElementById("firstname").value;
+		var lastName = document.getElementById("lastname").value;
+		document.getElementById("result").innerHTML=firstName+" "+lastName;
+		
+	}
+	</script>
+</head>
+<body>
+	<input type="text" onkeyup="printNames()" id="firstname" placeholder="Type First Name"><input id="lastname" type="text" placeholder="Type LastName" onkeyup="printNames()">
+	<h1>Welcome <span id="result"></span></h1>
+</body>
+</html>
