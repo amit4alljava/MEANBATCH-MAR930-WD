@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="angular.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/model.js"></script>
+	<script src="js/controller.js"></script>
+</head>
+<body ng-app="myapp" ng-controller="myctrl">
+
+<input ng-model="searchWord" type="text" placeholder="Type Word to Search">
+
+	<button ng-click="callMe()">Click Me</button>
+	<div ng-show='showHide'>
+	<input type="text" placeholder="Search on Result" ng-model="searchtxt">
+	</div>
+	<ul>
+		<li ng-repeat = "word in result.data[4].words|filter:searchtxt">
+			{{word}}
+		</li>
+	</ul>
+<!--	{{result.data[4].words}}-->
+</body>
+</html>
