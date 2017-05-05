@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="libs/angular.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/model.js"></script>
+	<script src="js/controller.js"></script>
+</head>
+<body ng-app="crudapp" ng-controller="myctrl">
+	<fieldset>
+		<legend>NOTE CRUD</legend>
+		<table>
+			<tr>
+				<td><label for="">Noteid</label></td>
+				<td><label for="">{{id}}</label></td>
+			</tr>
+			<tr>
+				<td><label for="">Desc</label></td>
+				<td><textarea ng-model="desc"  cols="30" rows="10"></textarea></td>
+			</tr>
+			<tr>
+				<td><label for="">Author</label></td>
+				<td><input ng-model="author" type="text"></td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td><button ng-click="add()">Add</button></td>
+				<td><button>Delete</button></td>
+				<td><button>Search</button></td>
+				<td><button>Update</button></td>
+				<td><button>Save</button></td>
+				<td><button>Load</button></td>
+				<td><button>Sort</button></td>
+				<td><button>Clear</button></td>
+				
+			</tr>
+		</table>
+		Number of Records ::: {{noteListData.length}}
+	</fieldset>
+	<fieldset>
+		<legend>Note List</legend>
+		<table border="1">
+			<thead>
+				<tr>
+					<td>Id</td>
+					<td>Desc</td>
+					<td>Author</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-class="{marking:note.mark}" ng-click="note.toggle()" ng-repeat="note in noteListData">
+					<td>{{note.id}}</td>
+					<td>{{note.desc}}</td>
+					<td>{{note.author}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</fieldset>
+</body>
+</html>
